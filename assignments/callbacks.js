@@ -23,10 +23,9 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
-
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
-  cb(arr.length())
+  cb(arr.length)
 }
 
 function last(arr, cb) {
@@ -49,9 +48,21 @@ function multiplyNums(x, y, cb) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  let result = list.includes(item)
-  cb(result)
+  cb(list.includes(item))
 }
+
+// Run functions and use the logResult() callback to
+// log them to the console
+let logResult = result => console.log(result)
+
+getLength(items, logResult)
+last(items, logResult)
+
+sumNums(5, 3, logResult)
+multiplyNums(5, 10, logResult)
+
+contains('Notebook', items, logResult) // true
+contains('MacBook', items, logResult) // false
 
 /* STRETCH PROBLEM */
 
