@@ -1,6 +1,8 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+let friendlyGreeting = (name) => console.log(`Hello, ${name}! It's great to see you.`)
+friendlyGreeting('Spencer')
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
